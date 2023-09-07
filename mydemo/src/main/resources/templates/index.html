@@ -5,6 +5,15 @@
 	<title>首页</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>index</h1>
+	<a th:href="@{/logout}"><h3>登出</h3></a>
+	<table>
+		<tr>
+			<td th:text="${session.user}"></td>
+			<td th:text="user.password"></td>
+			<td th:text="user.authorities"></td>
+			<td th:text="user.roles"></td>
+		</tr>
+	</table>
 </body>
 </html>

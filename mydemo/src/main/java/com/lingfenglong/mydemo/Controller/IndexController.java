@@ -10,8 +10,8 @@ public class IndexController {
 
     @GetMapping("/index")
     public String index(HttpServletRequest request, Model model) {
-        String user = request.getParameter("user");
-        model.addAttribute("user", user);
+//        String user = request.getParameter("user");
+//        model.addAttribute("user", user);
         return "/index";
     }
 }
