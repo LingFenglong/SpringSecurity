@@ -6,14 +6,15 @@
 </head>
 <body>
     <h1>index</h1>
-	<a th:href="@{/logout}"><h3>登出</h3></a>
-	<table>
-		<tr>
-			<td th:text="${session.user}"></td>
-			<td th:text="user.password"></td>
-			<td th:text="user.authorities"></td>
-			<td th:text="user.roles"></td>
-		</tr>
-	</table>
+	<form th:action="@{/logout}" th:method="post">
+		<input type="submit" value="登出">
+	</form>
+<!--	<table>-->
+<!--		<tr th:object="*{session.get('user')}">-->
+<!--			<td th:text="${user.password}"></td>-->
+<!--			<td th:text="user.authorities"></td>-->
+<!--			<td th:text="user.roles"></td>-->
+<!--		</tr>-->
+<!--	</table>-->
 </body>
 </html>
